@@ -1,0 +1,15 @@
+.app-container {
+  height: 80vh;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.footer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
