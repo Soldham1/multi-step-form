@@ -1,11 +1,8 @@
 import Form from "./Form";
+import Template from "./Template";
 
 function App() {
-  return (
-    <div className="ui very padded text container segment app-container">
-      <Form />
-    </div>
-  );
+  return <Template />;
 }
 
 export default App;

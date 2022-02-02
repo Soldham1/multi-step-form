@@ -1,39 +1,50 @@
 import React from "react";
 
-import PaperURLDOI from "./formElements/PaperURLDOI";
+import UrlInput from "./formElements/UrlInput";
+import TextInput from "./formElements/TextInput";
+import BooleanInput from "./formElements/BooleanInput";
 
 function PaperInfo({ formData, setFormData }) {
   return (
-    <div className="ui form">
-      <div className="field">
-        <label>Paper Type</label>
-        <select
-          value={formData.paperType}
-          onChange={(event) => {
-            setFormData({ ...formData, paperType: event.target.value });
-          }}
-          className="ui fluid dropdown"
-        >
-          <option value="">Select</option>
-          <option value="Journal">Journal</option>
-          <option value="Report">Report</option>
-          <option value="Thesis">Thesis</option>
-        </select>
-      </div>
-      <div>
-        <input
-          className="ui toggle checkbox"
-          type="checkbox"
-          id="openAccess"
-          name="openAccess"
-          checked={formData.openAccess}
-          onChange={(event) =>
-            setFormData({ ...formData, openAccess: event.target.checked })
-          }
-        />
-        <label>Is it Open Access?</label>
-      </div>
-      <PaperURLDOI formData={formData} setFormData={setFormData} />
+    <div className="step">
+      <h2>Paper</h2>
+      <h3 className="main_question">
+        Please fill with your details about your paper
+      </h3>
+      <UrlInput
+        name="paperURL"
+        placeholder="Paper URL"
+        value={formData.paperURL}
+        onChange={(event) => {
+          setFormData({ ...formData, paperURL: event.target.value });
+        }}
+      />
+      <TextInput
+        name="paperDOI"
+        placeholder="Paper DOI"
+        value={formData.paperDOI}
+        onChange={(event) => {
+          setFormData({ ...formData, paperDOI: event.target.value });
+        }}
+      />
+      <TextInput
+        name="paperLicence"
+        placeholder="Licence"
+        value={formData.paperLicence}
+        onChange={(event) => {
+          setFormData({ ...formData, paperLicence: event.target.value });
+        }}
+      />
+      <BooleanInput
+        name="paperEmargo"
+        label="Was there an embargo period?"
+        a="Yes"
+        b="No"
+        value={formData.paperEmbargo}
+        onChange={(event) => {
+          setFormData({ ...formData, paperEmbargo: event.target.value });
+        }}
+      />
     </div>
   );
 }

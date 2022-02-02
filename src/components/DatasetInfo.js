@@ -1,34 +1,49 @@
 import React from "react";
 
+import UrlInput from "./formElements/UrlInput";
+import TextInput from "./formElements/TextInput";
+import DropDown from "./formElements/DropDown";
+
 function DatasetInfo({ formData, setFormData }) {
   return (
-    <div className="ui form">
-      <div className="ui field">
-        <label>Data URL</label>
-        <input
-          id="DataURL"
-          type="url"
-          placeholder="Data URL"
-          value={formData.dataURL}
-          onChange={(event) =>
-            setFormData({ ...formData, dataURL: event.target.value })
-          }
-        ></input>
-      </div>
-      <div className="field">
-        <label>Dataset Format</label>
-        <select
-          value={formData.format}
-          onChange={(event) => {
-            setFormData({ ...formData, format: event.target.value });
-          }}
-          className="ui fluid dropdown"
-        >
-          <option value="">Select</option>
-          <option value="CSV">CSV</option>
-          <option value="Plain Text">Plain Text</option>
-        </select>
-      </div>
+    <div className="step">
+      <h2>Dataset</h2>
+      <h3 className="main_question">
+        Please fill with your details about your dataset
+      </h3>
+      <UrlInput
+        name="dataURL"
+        placeholder="Data URL"
+        value={formData.dataURL}
+        onChange={(event) => {
+          setFormData({ ...formData, dataURL: event.target.value });
+        }}
+      />
+      <TextInput
+        name="dataDOI"
+        placeholder="Data DOI"
+        value={formData.dataDOI}
+        onChange={(event) => {
+          setFormData({ ...formData, dataDOI: event.target.value });
+        }}
+      />
+      <DropDown
+        name="format"
+        placeholder="Format"
+        options={[{ value: "CSV" }, { value: "Numerical Dataset" }]}
+        value={formData.format}
+        onChange={(event) => {
+          setFormData({ ...formData, format: event.target.value });
+        }}
+      />
+      <TextInput
+        name="dataLicence"
+        placeholder="Data Licence"
+        value={formData.dataLicence}
+        onChange={(event) => {
+          setFormData({ ...formData, dataLicence: event.target.value });
+        }}
+      />
     </div>
   );
 }
