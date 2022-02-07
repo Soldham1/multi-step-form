@@ -1,8 +1,8 @@
 import React from "react";
 
-import UrlInput from "./formElements/UrlInput";
-import TextInput from "./formElements/TextInput";
-import DropDown from "./formElements/DropDown";
+import UrlInput from "../formElements/UrlInput";
+import TextInput from "../formElements/TextInput";
+import DropDown from "../formElements/DropDown";
 
 function DatasetInfo({ formData, setFormData }) {
   return (

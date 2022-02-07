@@ -16,7 +16,7 @@ const DisplayOther = (props) => {
     return (
       <TextInput
         name={props.name}
-        placeholder={props.placeholder}
+        placeholder={"Other " + props.placeholder}
         value={props.otherValue}
         onChange={props.otherOnChange}
       />

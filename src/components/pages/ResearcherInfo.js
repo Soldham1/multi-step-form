@@ -1,8 +1,8 @@
 import React from "react";
 
-import DropDown from "./formElements/DropDown";
-import DropDownOther from "./formElements/DropDownOther";
-import TextInput from "./formElements/TextInput";
+import DropDown from "../formElements/DropDown";
+import DropDownOther from "../formElements/DropDownOther";
+import TextInput from "../formElements/TextInput";
 
 function ResearcherInfo({ formData, setFormData }) {
   return (

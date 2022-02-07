@@ -1,8 +1,8 @@
 import React from "react";
 
-import UrlInput from "./formElements/UrlInput";
-import TextInput from "./formElements/TextInput";
-import BooleanInput from "./formElements/BooleanInput";
+import UrlInput from "../formElements/UrlInput";
+import TextInput from "../formElements/TextInput";
+import BooleanInput from "../formElements/BooleanInput";
 
 const DisplayLicence = ({ formData, setFormData }) => {
   if (formData.openSource === "Yes") {

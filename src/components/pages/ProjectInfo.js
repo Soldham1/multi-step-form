@@ -1,8 +1,8 @@
 import React from "react";
 
-import TextInput from "./formElements/TextInput";
-import DropDownOther from "./formElements/DropDownOther";
-import NumberInput from "./formElements/NumberInput";
+import TextInput from "../formElements/TextInput";
+import DropDownOther from "../formElements/DropDownOther";
+import NumberInput from "../formElements/NumberInput";
 
 function ProjectInfo({ formData, setFormData }) {
   return (
